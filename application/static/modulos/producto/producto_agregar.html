@@ -1,0 +1,55 @@
+<!--FORM-->
+<div class="product-form">
+  <form class="form product__form" enctype="multipart/form-data" action="/producto/guardar" method="POST">
+    <h1 class="heading-primary">Agregar un producto</h1>
+    <span style="color:red;">{error_denominacion}</span>
+    <input type="text" class="form__input" id="denominacion" name="denominacion" value="{denominacion}" placeholder="Nombre del producto">
+    <span style="color:green; font-size:1.2em;">{ok_denominacion}</span>
+    <span style="color:red;">{error_precio}</span>
+    <input type="number" class="form__input" id="precio" name="precio" value="{precio}" placeholder="Precio" step="0.01" min="0" max="999999.99">
+    <span style="color:green; font-size:1.2em;">{ok_precio}</span>
+    <div id="padre">
+      <h2 class="heading-secondary">Añadir Imágenes</h2>
+      <div class="form-group hijo" style="height: 30px;">
+        <div class="col-sm-8">
+          <span style="color:red;">{error_imagen}</span>
+          <input type="file" class="form_input" name="imagen[]">
+        </div>
+        <div class="col-sm-4" style="height: 101.1px;text-align: center;line-height: 80.1px;">
+          <button type="button" class="btn btn-success btn-sm" onclick="agregar()"><i class="glyphicon glyphicon-plus"></i></button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="eliminar(this)"><i class="glyphicon glyphicon-trash"></i></button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span style="color:red; display:block;">{fallo}</span>
+      <h2 class="heading-secondary" style="margin-top:1rem;">Categorías</h2>
+      <select name="categoria_id">
+        <option value="0">-- categoría --</option>
+        <!--categorias-->
+        <option value="{categoria_id}">{espacio}{a_denominacion}</option>
+        <!--categorias-->
+      </select>
+    </div>
+    <div>
+      <h2 class="heading-secondary">Añadir Categoría</h2>
+      <div class="form-group" style="height: 30px;">
+        <div class="col-sm-8">
+          <input type="text" class="form_input" name="compositora_denominacion">
+        </div>
+        <select name="compuesta_categoria_id">
+          <option value="0">-- supcategoría --</option>
+          <!--sup_categorias-->
+          <option value="{categoria_id}">{espacio}{a_denominacion}</option>
+          <!--sup_categorias-->
+        </select>
+      </div>
+    </div>
+    <div>
+      <div class="form__button">
+        <button type="submit" class="form__submit" value="Enviar">Enviar </button>
+        <a class="box-info__return-icon" href="/producto/listar" title="listar">&crarr;</a>
+      </div>
+  </form>
+    </div>
+    <!--FORM-->

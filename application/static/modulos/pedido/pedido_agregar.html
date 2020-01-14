@@ -1,0 +1,65 @@
+<!--FORM-->
+<form class="form pedido__form" method="POST" action="/pedido/guardar" >
+  <h2 class="heading-secondary">Agregar pedido </h2>
+  <div>
+    <datalist id="clientes">
+      <!--clientes-->
+      <option value="{cliente_id}">{denominacion}</option>
+      <!--clientes-->
+    </datalist>
+  </div>
+  <div class="form-group" style="height: 70px;">
+    <label for="cliente" class="col-sm-2 form__label">ID Cliente</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" name="cliente_id" list="clientes" autocomplete="off" style="width: auto;">
+    </div>
+    <div class="col-sm-8"></div>
+
+  </div> 
+  <div class="form-group hijo">
+
+    <datalist id="productos">
+      <!--productos-->
+      <option value="{producto_id}">{denominacion}</option>
+      <!--productos-->
+    </datalist>
+  </div>
+  <!-- agregarmás -->
+  <div id="padre">
+    <h2 class="heading-secondary">Productos</h2>
+    <div class="form-group hijo" style="height: 100px;">
+      <div class="col-sm-3">
+        <label for="cantidad" class="form__label">Cant.</label>
+        <input type="number" name="cantidad[]" class="form__input">
+      </div>
+      <div class="col-sm-6">
+        <label for="producto" class="form__label">Producto</label>
+        <input type="text" name="producto_id[]" list="productos" class="form__input" autocomplete="off">
+      </div>
+      <div class="col-sm-3" style="height: 101.1px;text-align: center;line-height: 80.1px;">
+        <button type="button" class="btn btn-success btn-sm" onclick="agregar()"><i class="glyphicon glyphicon-plus"></i></button>
+        <button type="button" class="btn btn-danger btn-sm" onclick="eliminar(this)"><i class="glyphicon glyphicon-trash"></i></button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span>
+      <!--ERRORES-->
+      {errores} 
+      <!--ERRORES-->
+    </span> 
+
+  </div>
+  <div> 
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Enviar"
+      style="background-color:#141212;x;
+            width:150px;height:50px;text-transform:uppercase;font-size:1.2em;">Enviar </button>
+    </div>
+    <div style="text-align:right;">
+      <a class="box-info__return-icon" href="/pedido/listar" title="listar">&crarr;</a>
+    </div>  
+
+</form>
+<!--FORM-->
+

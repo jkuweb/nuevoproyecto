@@ -1,0 +1,34 @@
+<!--FORM-->
+<div class="address-form">
+    <form class="form address__form" action="/domicilio/guardar" method="POST">
+        <h2 class="heading-secondary">Añadir una dirección</h2>
+
+        <label for="dynamic-label-input" class="form__label">calle</label>
+        <input type="text" class="form__input" id="calle" name="calle">
+
+
+        <label for="dynamic-label-input" class="form__label">número</label>
+        <input type="number" class="form__input" id="numero" name="numero">
+
+
+        <label for="dynamic-label-input" class="form__label">planta</label>
+        <input type="number" class="form__input" id="planta" name="planta">
+
+
+        <label for="dynamic-label-input" class="form__label">puerta</label>
+        <input type="text" class="form__input" id="puerta" name="puerta">
+
+
+        <label for="dynamic-label-input" class="form__label">ciudad</label>
+        <input type="text" class="form__input" id="ciudad" name="ciudad">
+
+
+
+        <div class="form__button">
+            <button type="submit" class="form__submit" value="Enviar">Enviar </button>
+            <a class="box-info__return-icon" href="/domicilio/listar"
+            title="listar">&crarr;</a>
+        </div>
+    </form>
+</div>
+<!--FORM-->

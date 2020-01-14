@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png">
+    <link rel="stylesheet" href="/static/css/icon-font.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/Chart.bundle.min.js">
+
+    <!--/static/css/icon-font.css-->
+    <title>Proyecto | Eugenia Bahit</title>
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js" language="javascript"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js">
+    <script src="/static/js/main.js"></script>
+    <!-- Europio -->
+    <script src="/static/js/europio_code.js"></script>
+    <script src="/static/js/main.js"></script>
+
+
+  </head>
+  <body>
+    <div id="throbber" style="display:none; min-height:120px;"></div>
+    <div id="noty-holder"></div>
+    <div id="wrapper">
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <a class="navbar-brand" href="/">
+            <img src="/static/img/logo-white.png" alt="Logo" class="header__logo">
+          </a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+          <li class="dropdown">
+            <a href="/usuario/logear" class="dropdown-toggle"
+                                      data-toggle="dropdown">{denominacion_usuario} <b class="fa fa-angle-down"></b></a>
+            <ul class="dropdown-menu">
+              <!--
+              <li><a href="#"><i class="fa fa-fw fa-user"></i> Editar Perfil</a></li>
+              <li><a href="#"><i class="fa fa-fw fa-cog"></i> Cambiar contraseña</a></li>
+              <li class="divider"></li>
+              -->
+              <li><a href="/usuario/logout"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li>
+              <a href="#" data-toggle="collapse" data-target="#submenu-1"
+                                                 style="color:#f9b69c;"><i
+                  class="fa fa-fw fa-id-card"></i>Cliente<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+              <ul id="submenu-1" class="collapse">
+                <li><a href="/cliente/agregar"><i class="fa fa-angle-double-right"></i> Añadir nueva</a></li>
+                <li><a href="/cliente/listar"><i class="fa fa-angle-double-right"></i>
+
+                   Listar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" data-toggle="collapse" data-target="#submenu-2"
+                                                 style="color: #ABDCD6;"><i
+                  class="fa fa-industry"></i>Producto<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+              <ul id="submenu-2" class="collapse">
+                <li><a href="/producto/agregar"><i class="fa fa-angle-double-right"></i> Añadir nueva</a></li>
+                <li><a href="/producto/listar"><i class="fa fa-angle-double-right"></i> Listar</a></li>
+              </ul>
+            </li>
+            <li>
+              <li>
+                <a href="#" data-toggle="collapse" data-target="#submenu-3"
+                                                   style="color:#e25d6e"><i
+                    class="fa fa-wrench"></i>Pedido<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                <ul id="submenu-3" class="collapse">
+                  <li><a href="/pedido/agregar"><i class="fa fa-angle-double-right"></i> Añadir nueva</a></li>
+                  <li><a href="/pedido/listar"><i class="fa fa-angle-double-right"></i> Listar</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" data-toggle="collapse"
+                            data-target="#submenu-4" style="color:#20938b"><i
+                              class="fa fa-sitemap"></i>Categoría<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                <ul id="submenu-4" class="collapse">
+                  <li><a href="/categoria/agregar"><i class="fa
+                        fa-angle-double-right"></i> Añadir nueva</a></li>
+                  <li><a href="/categoria/listar"><i class="fa fa-angle-double-right"></i> Listar</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" data-toggle="collapse"
+                            data-target="#submenu-5" style="color:#20678b"><i
+                              class="fa fa-sitemap"></i>Usuario<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                <ul id="submenu-5" class="collapse">
+                  <li><a href="/usuario/listar"><i class="fa fa-angle-double-right"></i> Listar</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+        <!-- /.container-fluid -->
+        <!--HTML-->
+      </div>
+  </body>
+</html>

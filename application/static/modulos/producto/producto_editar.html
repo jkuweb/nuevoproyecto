@@ -1,0 +1,73 @@
+<!--FORM-->
+<div class="product-form">
+  <form class="form product__form" enctype="multipart/form-data" action="/producto/actualizar" method="POST">
+
+    <h1 class="heading-primary" style="color:#ff7098; letter-spacing:0;">Editar un producto</h1>
+    <!--producto-->
+    <span name="error" style="color:red;">{error_denominacion}</span>
+    <label style="margin-right:2rem; display:block;">Nombre</label>
+    <input type="text" class="form__input" id="denominacion" name="denominacion"
+                                                             value="{denominacion}" style="width:55%;">
+    <span style="color:green;">{ok_denominacion}</span>
+
+    <span name="error" style="color:red; display:block;">{error_precio}</span>
+    <label style="margin-right:2rem; display:block;">Precio</label>
+    <input type="number" class="form__input" id="precio" name="precio"
+                                                         value="{precio}" step="0.01" min="0"  placeholder="Precio"
+                                                                                               style="width:30%;">
+    <span style="color:green;">{ok_precio}</span>
+    <input type="text" name="producto_id" value="{producto_id}" hidden>
+    <p style="color:black;">Categoría actual:<span style="color:#ff7098;">
+      {categoria_actual}</span></p>
+    <!--producto-->
+    <div>
+      <h2 class="heading-secondary" style="text-align:center;border-bottom:1px
+      solid #fdf5e6b3;padding:.7rem;">Categoría</h2>
+      <select name="categoria_id">
+        <option value="">-- categoría --</option>
+        <!--categorias-->
+        <option value="{categoria_id}">{espacio}{a_denominacion}</option>
+        <!--categorias-->
+      </select>
+    </div>
+
+    <h2 class="heading-secondary" style="text-align:center;border-bottom:1px
+    solid #fdf5e6b3;padding:.7rem;">Imágenes</h2>
+    <!--imagenes-->
+    <br>
+    <img class="product__img" src="/producto/imagen/{id}/{nombre_imagen}">
+    <a href="/producto/eliminarImagen/{id}/{nombre_imagen}">Eliminar</a>
+    <!--imagenes-->
+    <div> 
+      <div id="padre">
+        <h2 class="heading-secondary" style="text-align:center;border-bottom:1px
+        solid #fdf5e6b3;padding:.7rem;">Añadir Imágenes</h2>
+        <div class="form-group hijo" style="height: 30px;">
+          <div class="col-sm-8">
+            <input type="file" class="form_input" name="imagen[]">
+            <!--errores-mime-->
+            <span style="color:red;">{error_imagen}</span>
+            <!--errores-mime-->
+          </div>
+          <div class="col-sm-3" style="text-align: center;line-height: 0px;">
+            <button type="button" class="btn btn-success btn-sm" onclick="agregar()">
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="eliminar(this)">
+              <i class="glyphicon glyphicon-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div> 
+        <div class="form__button" style="padding:3em;">
+          <button type="submit" class="form__submit" value="Editar"
+            style="background-color:red;
+            width:150px;height:50px;text-transform:uppercase;font-size:1.2em;">Editar </button>
+        </div>
+        <div style="text-align:right;">
+          <a class="box-info__return-icon" href="/producto/listar" title="listar">&crarr;</a>
+        </div>   
+  </form>
+      </div>
+      <!--FORM-->       

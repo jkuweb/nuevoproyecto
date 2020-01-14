@@ -1,0 +1,47 @@
+<section class="box-info">
+  <h2 class="box-info__heading">Pedido</h2>
+  <table class="box-info__table">
+    <tr class="box-info__row">
+      <th class="box-info__head">Pedido_ID</th>
+      <th class="box-info__head">Fecha</th>
+      <th class="box-info__head">Estado</th>
+      <th class="box-info__head">Cliente</th>
+    </tr>
+    <tr class="box-info__row">
+      <td class="box-info__data">{pedido_id}</td>
+      <td class="box-info__data">{fecha}</td>
+      <td class="box-info__data">{estado}
+        <a href="/pedido/editar/{pedido_id}" title="editar el estado del pedido"
+          style="color:blue; font-size:1.2em; margin-left:2rem;">editar</a>  
+      </td>
+      <td class="box-info__data">
+        <a href="/cliente/ver/{cliente_id}" title="ver cliente" style="color:blue;">{cliente_id}</a></td>
+    </tr>
+  </table>
+  <h2 class="box-info__heading">Productos</h2>
+  <table class="box-info__table">
+    <tr class="box-info__row">
+      <th class="box-info__head">Nombre</th>
+      <th class="box-info__head">Cantidad</th>
+      <th class="box-info__head">Precio</th>
+      <th class="box-info__head">TOTAL</th>
+      <th class="box-info__head">IMPORTE</th>
+    </tr>
+    <!--producto-->
+    <tr class="box-info__row">
+      <td class="box-info__data">
+        <a href="/producto/ver/{producto_id}" title="ver producto" style="color:blue;">{denominacion}</a></td>
+      <td class="box-info__data">{cantidad}</td>
+      <td class="box-info__data">{precio} &#8364;</td>
+      <td class="box-info__data">{total_producto} &#8364;</td>
+      <!--producto-->
+      <!--precio_total-->
+      <td class="box-info__data" style="font-weight:bold;">{total} &#8364;</td>
+    </tr>
+    <!--precio_total-->
+  </table>
+  <div class="box-info__options">
+    <a href="/pedido/eliminar/{pedido_id}" title="borrar pedido" class="btn btn-danger">BORRAR</a>  
+    <a class="box-info__return-icon" href="/pedido/listar" title="listar pedidos">&crarr;</a>      
+  </div>
+</section>

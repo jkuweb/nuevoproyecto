@@ -1,0 +1,28 @@
+<!--FORM-->
+<div class="categoria-form">
+  <form class="form categoria__form" action="/categoria/actualizar" method="POST">
+    <h2 class="heading-secondary" style="color:#9f3929;">Editar categoría</h2>
+
+    <label for="dynamic-label-input" class="form__label">Nombre</label>
+    <!--categoria-->
+    <label style="color:#9f3929;">{error_denominacion}</label>
+    <input type="text" class="form__input"  name="denominacion"
+                                            value="{denominacion}">
+    <input type="text" name="categoria_id" value="{categoria_id}" hidden>
+    <!--categoria-->
+    <div>
+      <label class="form__label" id="nombre">Categoría superior</label>
+        <select name="sup_categoria_id">
+        <!--sup_categorias-->
+        <option value="{categoria_id}">{espacio}{a_denominacion}</option>
+        <!--sup_categorias-->
+        </select>
+    </div>
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Editar"
+        style="background-color:#9f3929;">Editar</button>
+      <a class="box-info__return-icon" href="/categoria/listar">&crarr;</a>
+    </div>
+  </form>
+</div>
+<!--FORM-->

@@ -1,0 +1,22 @@
+<!--FORM-->
+<div class="address-form">
+  <form class="form cliente__form" enctype="multipart/form-data"
+    action="/usuario/autenticar" method="POST">
+    <h2 class="heading-primary">LOGING</h2>
+
+    <span style="color:red;">{error}</span>
+    <label for="usuario" class="form__label">Nombre de usuario</label>
+    <input type="text" class="form__input" id="usuario" name="usuario" required>
+
+    <label for="nif" class="form__label">Contraseña</label>
+    <input type="password" class="form__input" name="password" required>                                                             
+
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Enviar">Enviar </button>
+    </div>
+    <div>
+      <a href="/usuario/agregar">Eres nuevo? Regístrate</a>
+    </div>
+  </form>
+</div>
+<!--FORM-->

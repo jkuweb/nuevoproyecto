@@ -1,0 +1,73 @@
+<!--FORM-->
+<div class="address-form">
+  <form class="form cliente__form" enctype="multipart/form-data" action="/cliente/actualizar" method="POST">
+    <h1 class="heading-primary">Editar cliente</h1>
+  <div class="foto-cliente">
+    <!--imagen-->
+    <img class="foto-cliente" src="/cliente/imagen/{imagen}"
+                              style="height:10rem;">
+    <a href="/cliente/{recurso}/{imagen}" style="color:seashell;">{accion}</a>
+    <!--imagen-->
+  </div>
+
+    <span style="color:red; display:block">{error_denominacion}</span>
+    <label for="dynamic-label-input" class="form__label">Nombre</label>
+    <input type="text" class="form__input" id="denominacion" name="denominacion" value="{denominacion}">
+
+
+    <span style="color:red; display:block">{error_nif}</span>
+    <label for="dynamic-label-input" class="form__label">DNI</label>
+    <input type="text" class="form__input" id="nif" name="nif" value="{nif}">
+
+    <span style="color:red; display:block;">{error_imagen}</span>
+    <label for="nif" class="form__label">Cambiar foto de perfil</label>
+    <input type="file" name="imagen"> 
+
+    <h2 class="heading-secondary">Editar dirección</h2>
+
+
+    <span style="color:red; display:block">{error_calle}</span>
+    <label for="dynamic-label-input" class="form__label">Calle</label>
+    <input type="text" class="form__input" id="calle" name="calle" value="{calle}">
+
+
+    <span style="color:red; display:block">{error_numero}</span>
+    <label for="dynamic-label-input" class="form__label">Número</label>
+    <input type="number" class="form__input" id="numero" name="numero" value="{numero}">
+
+
+    <span style="color:red; display:block">{error_planta}</span>
+    <label for="dynamic-label-input" class="form__label">Planta</label>
+    <input type="text" class="form__input" id="planta" name="planta" value="{planta}">
+
+
+    <span style="color:red; display:block">{error_puerta}</span>
+    <label for="dynamic-label-input" class="form__label">Puerta</label>
+    <input type="text" class="form__input" id="puerta" name="puerta" value="{puerta}">
+
+
+    <span style="color:red; display:block">{error_ciudad}</span>
+    <label for="dynamic-label-input" class="form__label">Ciudad</label>
+    <input type="text" class="form__input" id="ciudad" name="ciudad" value="{ciudad}">
+
+
+    <h2 class="heading-secondary">Editar Datos de Contacto</h2>
+    <span style="color:red; display:block">{error_movil}</span>
+    <span style="color:red; display:block">{error_email}</span>
+      <!--contacto-->
+      <label for="dynamic-label-input" class="form__label">{denominacion_contacto}</label>
+      <input type="text" class="form__input"  name="valor[]" value="{valor}">
+      <input type="text" name="contacto_id[]" value="{contacto_id}" hidden>
+      <!--contacto-->
+
+      <input type="text" name="domicilio_id" value="{domicilio_id}" hidden>
+      <input type="text" name="cliente_id" value="{cliente_id}" hidden>
+      <div class="form__button">
+        <button type="submit" class="form__submit" value="Editar" style="background-color:red;">Editar</button>
+      </div>
+    <div class="box-info__return">
+      <a  class="box-info__return-icon" href="/cliente/listar" title="listar">&crarr;</a>
+    </div>
+  </form>
+</div>
+<!--FORM-->

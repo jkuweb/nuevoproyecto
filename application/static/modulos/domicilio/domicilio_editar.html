@@ -1,0 +1,35 @@
+<!--HTML-->
+<div class="address-form">
+    <form class="form address__form" action="/domicilio/actualizar" method="POST">
+        <h2 class="heading-secondary" style="color:red;">Editar dirección</h2>
+
+        <label for="dynamic-label-input" class="form__label"></label>
+        <input type="text" class="form__input" id="calle" name="calle" value="{calle}">
+
+
+        <label for="dynamic-label-input" class="form__label"></label>
+        <input type="number" class="form__input" id="numero" name="numero" value="{numero}">
+
+
+        <label for="dynamic-label-input" class="form__label"></label>
+        <input type="text" class="form__input" id="planta" name="planta" value="{planta}">
+
+
+        <label for="dynamic-label-input" class="form__label"></label>
+        <input type="text" class="form__input" id="puerta" name="puerta" value="{puerta}">
+
+
+        <label for="dynamic-label-input" class="form__label"></label>
+        <input type="text" class="form__input" id="ciudad" name="ciudad" value="{ciudad}">
+
+        <input type="text" name="domicilio_id" value="{domicilio_id}" hidden>
+
+
+        <div class="form__button">
+            <button type="submit" class="form__submit" value="Editar" style="background-color:red;">Editar</button>
+            <a class="box-info__return-icon" href="/domicilio/listar"
+            title="listar">&crarr;</a>
+        </div>
+    </form>
+</div>
+<!--HTML-->

@@ -1,0 +1,67 @@
+<section class="box-info cliente-info" style="top:60%;">
+  <div class="foto-cliente">
+    <img class="foto-cliente" alt="foto del cliente"
+    src="/cliente/imagen/{cliente_id}">
+  </div>
+    <!--cliente-->
+  <h2 class="box-info__heading cliente-heading">Nombre</h2>
+  <p class="client-name">{denominacion}</p>
+  <div class="nif-info">
+    <span>NIF: </span>
+  <p class="cliente-nif">{nif}</p>
+  
+  </div>
+  <h2 class="box-info__heading cliente-heading">Domicilio</h2>
+  <table class="box-info__table">
+    <tr class="box-info__row">
+      <th class="box-info__head">Calle</th>
+      <th class="box-info__head">Número</th>
+      <th class="box-info__head">Planta</th>
+      <th class="box-info__head">Puerta</th>
+      <th class="box-info__head">Ciudad</th>
+    </tr>
+    <tr class="box-info__row">
+      <td class="box-info__data">{calle}</td>
+      <td class="box-info__data">{numero}</td>
+      <td class="box-info__data">{planta}</td>
+      <td class="box-info__data">{puerta}</td>
+      <td class="box-info__data">{ciudad}</td>
+    </tr>
+    <!--cliente-->
+  </table>
+  <h2 class="box-info__heading cliente-heading">Datos de Contacto</h2>
+  <table class="box-info__table">
+    <tr class="box-info__row">
+      <th class="box-info__head">Tipo de contacto</th>
+      <th class="box-info__head">Contato</th>
+    </tr>
+    <!--datosdecontacto-->
+    <tr class="box-info__row">
+      <td class="box-info__data">{denominacion_contacto}</td>
+      <td class="box-info__data">{valor}</td>
+    </tr>
+    <!--datosdecontacto-->
+  </table>
+  <h2 class="box-info__heading cliente-heading">Datos del Pedido</h2>
+  <table class="box-info__table">
+    <tr class="box-info__row">
+      <th class="box-info__head">Pedido_id</a></th>
+      <th class="box-info__head">Fecha</th>
+      <th class="box-info__head">Estado</th>
+    </tr>
+    <tr class="box-info__row">
+      <!--pedido-->
+      <td class="box-info__data">
+        <a href="/pedido/ver/{pedido_id}" style="color:blue;">{pedido_id}</a>
+      </td>
+      <td class="box-info__data">{fecha}</td>
+      <td class="box-info__data">{estado}</td>
+    </tr>
+    <!--pedido-->
+  </table>
+  <div class="box-info__options">
+    <a href="/cliente/editar/{cliente_id}" class="btn btn-warning">EDITAR</a>        
+    <a href="/cliente/eliminar/{cliente_id}" class="btn btn-danger">BORRAR</a>  
+    <a class="box-info__return-icon" href="/cliente/listar" title="listar">&crarr;</a>      
+  </div>
+</section>

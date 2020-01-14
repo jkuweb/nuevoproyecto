@@ -1,0 +1,43 @@
+<!--FORM-->
+<form class="form" method="POST" action="/pedido/actualizar" >
+  <h2 class="heading-secondary">Editar estado </h2>
+  <div class="form-group" style="height: 70px;">
+    <label for="cliente" class="col-sm-2 form__label">ID Cliente</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" name="cliente_id"
+                                              value="{cliente_id}" style="width: auto;" readonly>
+    </div>
+    <div class="col-sm-8"></div>
+
+  </div> 
+  <div class="form-group" style="height: 70px;">
+    <label for="cliente" class="col-sm-2 form__label">ID Pedido</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" name="pedido_id"
+                                              value="{pedido_id}" style="width: auto;" readonly>
+    </div>
+  </div>
+  <div class="form-group" style="height: 70px;">
+    <label for="cliente" class="col-sm-2 form__label">Fecha</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" name="fecha" value="{fecha}"
+                                                           style="width: auto;" readonly>
+    </div>
+  </div>
+  <div class="form-group" style="height: 70px;">
+    <label for="cliente" class="col-sm-2 form__label">Estado</label>
+    <div class="col-sm-2">
+        <select name="estado">
+          <!--estados-->
+          <option value="{codigo_estado}">{descripcion_estado}</option>
+          <!--estados-->
+        </select>
+    </div>
+  </div>
+  <div> 
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Enviar">Editar </button>
+    <a class="box-info__return-icon" href="/pedido/ver/{pedido_id}" title="listar">&crarr;</a>      
+    </div>
+</form>
+<!--FORM-->

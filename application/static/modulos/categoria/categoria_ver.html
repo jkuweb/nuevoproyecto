@@ -1,0 +1,40 @@
+<section class="box-info categoria-info" style="padding:1em;">
+<h1 class="heading-primary">VER CATEGORIA</h1>  
+  <p style="text-transform: uppercase;text-align: center;font-size: 2em;letter-spacing: 0.2em;">{categoria_denominacion}</p>
+  <h2 class="box-info__heading" style="border-bottom:1px solid;">SUB-CATEGORIA</h2>  
+  <table style="margin-bottom: 20px; margin-left:2em;">
+    <!--sup_categorias-->
+    <tr class="box-info__row">
+      <td class="box-info__data" style="margin-left:{margin}em;
+      display:inline-block; text-align:left; color:#fff;"><span
+                                                            style="color:#000;">{guion}</span> {a_denominacion}<td>
+    </tr>
+    <!--sup_categorias-->
+  </table>
+  <h2 class="box-info__heading" style="border-bottom:1px solid;margin-bottom:0;">PRODUCTOS</h2>  
+  <table style="margin-bottom: 20px; margin-left:-3em;width:100%;">
+    <tr class="box-info__row">
+      <th class="box-info__head">Producto_ID</th>
+      <th class="box-info__head">Nombre</th>
+      <th class="box-info__head">Precio</th>     
+    </tr>
+    </tr>    
+    <!--productos-->
+    <tr class="box-info__row">
+      <td class="box-info__data">
+        {producto_id}
+	  </td>
+      <td class="box-info__data">
+        <a href="/producto/ver/{producto_id}" title="ver producto"
+          style="color:#362392;text-decoration:underline;">{producto_denominacion}</a>
+	  </td>
+      <td class="box-info__data">
+        {producto_precio}
+	  </td>
+    </tr>
+    <!--productos-->
+  </table>
+  <div style="text-align: end;padding: 1em;" >
+    <a class="box-info__return-icon" href="/categoria/listar" title="listar categorías">&crarr;</a>      
+  </div>
+</section>

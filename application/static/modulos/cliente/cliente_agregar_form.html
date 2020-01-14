@@ -1,0 +1,84 @@
+<!--FORM-->
+<div class="address-form">
+  <form class="form cliente__form" enctype="multipart/form-data" action="/cliente/guardar" method="POST">
+    <h2 class="heading-primary">Añadir Cliente</h2>
+
+    <span style="color:red; display:block;">{error_denominacion}</span>
+    <label for="denominacion" class="form__label">Nombre</label>
+    <input type="text" class="form__input" id="denominacion" name="denominacion"
+                                                             value="{denominacion}">
+    <span style="color:green; font-size:1.4em;">{ok_denominacion}</span>
+
+    <span style="color:red; display:block;">{error_nif}</span>
+    <label for="nif" class="form__label">Nif</label>
+    <input type="text" class="form__input" id="nif" name="nif" maxlength="9"
+                                                               size="9"
+                                                               placeholder="01234567A"
+                                                               value="{nif}">
+    <span style="color:green; font-size:1.4em;">{ok_nif}</span>
+
+    <span style="color:red; display:block;">{error_imagen}</span>
+    <label for="nif" class="form__label">Añadir foto de perfil</label>
+    <input type="file" name="imagen"> 
+
+    <h2 class="heading-secondary">Añadir dirección</h2>
+
+    <span style="color:red; display:block;">{error_calle}</span>
+    <label for="calle" class="form__label">calle</label>
+    <span style="color:green;">{ok_calle}</span>
+    <input type="text" class="form__input" id="calle" name="calle"
+                                                      value="{calle}">
+
+    <span style="color:red; display:block;">{error_numero}</span>
+    <span style="color:red; display:block;">{error_planta}</span>
+    <span style="color:red; display:block;">{error_puerta}</span>
+    <div class="address-info">
+      <label for="numero" class="form__label">número</label>
+    <label class="col-form-label" style="color:green;">{ok_numero}</label>
+      <input type="number" class="form__input" id="numero" name="numero"
+                                                           value="{numero}">
+
+
+      <label for="planta" class="form__label">planta</label>
+    <label class="col-form-label" style="color:green;">{ok_planta}</label>
+      <input type="number" class="form__input" id="planta" name="planta"
+                                                           value="{planta}">
+
+
+
+      <label for="puerta" class="form__label">puerta</label>
+    <label class="col-form-label" style="color:green;">{ok_puerta}</label>
+    <input type="text" class="form__input" id="puerta" name="puerta"
+                                                       value="{puerta}">
+
+    </div>
+
+    <span style="color:red; display:block;">{error_ciudad}</span>
+    <label for="ciudad" class="form__label">ciudad</label>
+    <label class="col-form-label" style="color:green;">{ok_ciudad}</label>
+    <input type="text" class="form__input" id="ciudad" name="ciudad"
+                                                       value="{ciudad}">
+
+    <h2 class="heading-secondary">Añadir datos de contacto</h2>
+    <span style="color:red; display:block;">{error_email}</span>
+    <label for="email" class="form__label">E-mail</label>
+    <span style="color:green;">{ok_email}</span>
+    <input type="email" class="form__input" id="email" name="email"
+                                                       value="{email}">
+
+    <span style="color:red; display:block;">{error_movil}</span>
+    <label for="movil" class="form__label">Télefono Móvil</label>
+    <span style="color:green;">{ok_movil}</span>
+    <input type="text" class="form__input" id="movil" name="movil"
+    value="{movil}">
+
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Enviar">Enviar </button>
+    </div>
+    <div class="box-info__return">
+      <a class="box-info__return-icon" href="/cliente/listar" title="listar">&crarr;</a>
+    </div>
+  </form>
+
+</div>
+<!--FORM-->

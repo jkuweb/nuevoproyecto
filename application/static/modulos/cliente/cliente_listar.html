@@ -1,0 +1,65 @@
+<div class="container list-box">
+    <div class="starter-template">
+
+        <div class="panel panel-primary data-table__info">
+
+            <!-- PANEL CABECERA DEL FORMULARIO -->
+            <div class="panel-heading box-info__heading">
+                <h4><span class="glyphicon glyphicon-task"></span> Lista de Clientes</h4>
+            </div>
+
+
+            <div class="panel-body">
+                <table id="example" class="table table-bordered table-striped box-info__table">
+                    <thead>
+                        <tr>
+                            <th class="box-info__head">clienteID</th>
+                            <th class="box-info__head">nombre</th>
+                            <th class="box-info__head">NIF</th>
+                            <th class="box-info__head">domicilioID</th>
+                            <th class="box-info__head">calle</th>
+                            <th class="box-info__head">numero</th>
+                            <th class="box-info__head">planta</th>
+                            <th class="box-info__head">puerta</th>
+                            <th class="box-info__head">ciudad</th>
+                            <th class="box-info__head">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--fila-->
+                        <tr>
+                            <td class="box-info__data">{cliente_id}</a></td>
+                            <td class="box-info__data"><a href="/cliente/ver/{cliente_id}" title="Ver cliente">{denominacion}</a></td>
+                            <td class="box-info__data">{nif}</td>
+                            <td class="box-info__data"><a href="/domicilio/ver/{domicilio_id}" title="Ver domicilio">{domicilio_id}</a></td>
+                            <td class="box-info__data">{calle}</td>
+                            <td class="box-info__data">{numero}</td>
+                            <td class="box-info__data">{planta}</td>
+                            <td class="box-info__data">{puerta}</td>
+                            <td class="box-info__data">{ciudad}</td>
+                            <td class="box-info__data">
+                                <a href="/cliente/ver/{cliente_id}" class="btn
+                                                                    btn-info
+                                                                    btn-sm"
+                                                                    title="Ver cliente"><i
+                                        class="glyphicon glyphicon-eye-open"></i> Ver</a>
+                                <a href="/cliente/editar/{cliente_id}" class="btn btn-warning btn-sm" title="Editar cliente"><i
+                                        class="glyphicon glyphicon-pencil"></i>
+                                    Editar</a>
+                                <a href="/cliente/eliminar/{cliente_id}" class="btn btn-danger btn-sm" title="Eliminar cliente"><i
+                                        class="glyphicon glyphicon-trash"></i>
+                                    Borrar</a>
+                            </td>
+                        </tr>
+                        <!--fila-->
+
+                    </tbody>
+                </table>
+
+                <div class="form__button">
+                    <a href="/cliente/agregar" class="data-table__submit">Agregar</a>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

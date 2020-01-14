@@ -1,0 +1,22 @@
+<div class="product-form">
+  <form class="form categoria__form" action="/categoria/guardar" method="POST">
+    <h1 class="heading-primary">Agregar Categoria</h1> 
+    <span style="color:#9f3929;">{error_denominacion}</span>
+   <label class="form__label" name="categoria">Añadir categoría</label> 
+   <input class="form__input" type="text" name="denominacion" autocomplete="off"> 
+    <div>
+      <label class="form__label" id="nombre">Categoría superior</label>
+      <select name="categoria_id">
+        <!--sup_categorias-->
+        <option value="{categoria_id}">{espacio}{a_denominacion}</option>
+        <!--sup_categorias-->
+      </select>
+    </div>
+    <div class="form__button">
+      <button type="submit" class="form__submit" value="Enviar">Enviar </button>
+    </div>
+    <div class="box-info__return">
+      <a  class="box-info__return-icon" href="/categoria/listar">&crarr;</a>
+    </div>
+  </form>
+</div>

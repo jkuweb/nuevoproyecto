@@ -1,0 +1,29 @@
+<!--VER-->
+<section class="box-info">
+    <h2 class="box-info__heading">Producto</h2>
+    <!--imagenes-->
+    <img class="product__img" src="/producto/imagen/{id}/{nombre_imagen}">
+    <!--imagenes-->
+<table class="box-info__table">    
+    <tr class="box-info__row">
+      <th class="box-info__head">Denominación</th>
+      <th class="box-info__head">Precio</th>     
+      <th class="box-info__head">Categorías</th>     
+    </tr>
+    <tr class="box-info__row">
+      <!--producto-->
+      <td class="box-info__data">{denominacion}</td>
+      <td class="box-info__data">{precio} &#8364;</td>
+      <td class="box-info__data">
+      {categoria}
+      </td>
+    </tr>    
+</table>
+  <div class="box-info__options">
+        <a href="/producto/editar/{producto_id}" class="btn btn-warning">EDITAR</a>        
+        <a href="/producto/eliminar/{producto_id}" class="btn btn-danger">BORRAR</a>  
+        <a class="box-info__return-icon" href="/producto/listar" title="listar">&crarr;</a>      
+    </div>
+      <!--producto-->
+ </section>    
+<!--VER-->

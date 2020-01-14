@@ -1,0 +1,33 @@
+<!--FORM-->
+<div class="address-form">
+  <form class="form cliente__form" enctype="multipart/form-data"
+                                   action="/usuario/guardar" method="POST">
+    <h2 class="heading-primary">Registro - Nuevo Usuario -</h2>
+
+    <span style="color:red;">{error_denominacion}</span>
+    <label for="denominacion" class="form__label">Nombre</label>
+    <input type="text" class="form__input" id="denominacion" name="denominacion"
+                                                             value="{denominacion}">
+    <span style="color:green; font-size:1.2em;">{ok_denominacion}</span>
+    <span style="color:red; display:inline-block">{error_usuario}</span>
+    <span style="color:red;">{usuario_existe}</span>
+    <label for="usuario" class="form__label">Nombre de usuario</label>
+    <input type="text" class="form__input" id="usuario" name="usuario"
+                                                        value="{usuario}">
+    <span style="color:green; font-size:1.2em;">{ok_usuario}</span>
+
+    <label for="nif" class="form__label">Contraseña</label>
+    <input type="password" class="form__input" name="password" style="width: 40em;">                                                             
+    <div>
+      <span>
+      <!--ERRORES-->
+      {errores}
+      <!--ERRORES-->
+      </span>
+    </div>
+      <div class="form__button">
+        <button id="btCodificar" type="submit" class="form__submit" value="Enviar">Enviar </button>
+      </div>
+  </form>
+</div>
+<!--FORM-->
